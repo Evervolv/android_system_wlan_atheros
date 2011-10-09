@@ -35,6 +35,7 @@ EXTRA_CFLAGS += -I$(ATH_SRC_BASE)/os/linux/include
 EXTRA_CFLAGS += -I$(ATH_SRC_BASE)/os/
 EXTRA_CFLAGS += -I$(ATH_SRC_BASE)/bmi/include
 EXTRA_CFLAGS += -I$(ATH_SRC_BASE)/../include/AR6002
+EXTRA_CFLAGS += -fno-pic
 
 EXTRA_CFLAGS += -DLINUX -D__KERNEL__ \
                 -DTCMD -DSEND_EVENT_TO_APP -DUSER_KEYS \

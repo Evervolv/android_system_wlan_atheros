@@ -37,7 +37,8 @@ static void ar6000_enable_mmchost_detect_change(int enable);
 
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-char fwpath[256] = "/system/wifi";
+//char fwpath[256] = "/system/wifi";
+char fwpath[256] = "/system/etc/firmware/";
 #endif /* LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0) */
 int wowledon;
 unsigned int enablelogcat;

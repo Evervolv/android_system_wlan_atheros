@@ -138,7 +138,23 @@
 extern void plat_setup_power_stub(struct ar6_softc *ar, int on, int detect); 
 #define plat_setup_power(ar, on, detect) plat_setup_power_stub(ar, on, detect)
 #else
+
+#ifdef TARGET_EUROPA
+extern void wlan_setup_power(int on, int detect);
+#define plat_setup_power(ar, on, detect) wlan_setup_power(on, detect)
+#elif defined (CONFIG_MACH_TENDERLOIN)
+extern int board_sdio_wifi_enable(unsigned int param);
+extern int board_sdio_wifi_disable(unsigned int param);
+#define plat_setup_power(ar, on, detect)	\
+	do {									\
+		if (on)								\
+			board_sdio_wifi_enable(0);		\
+		else								\
+			board_sdio_wifi_disable(0);		\
+	} while(0)
+#else
 #define plat_setup_power(ar, on, detect) /* define as your function */
+#endif 
 #endif 
 
 #endif /* _HOST_WLAN_CONFIG_H_ */
