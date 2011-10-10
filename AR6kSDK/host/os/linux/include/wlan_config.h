@@ -108,7 +108,7 @@
  * Wake lock will be called when GPIO asserted. 
  */
 #ifndef PLAT_WOW_GPIO_PIN
-#define PLAT_WOW_GPIO_PIN                  0
+#define PLAT_WOW_GPIO_PIN                  137
 #endif
 
 /*

@@ -145,12 +145,12 @@ endif
 	$(_MAKE_BIN_OUTPUT_DIR)
 	$(MAKE)  $(_CROSS_COMPILE_LINE) -C $(ATH_LINUXPATH) ATH_HIF_TYPE=$(ATH_HIF_TYPE) SUBDIRS=$(ATH_SRC_BASE)/os/linux modules
 	$(MAKE) -C hif/$(ATH_HIF_TYPE)
-	$(MAKE) -C tools/wmiconfig/
-	$(MAKE) -C tools/recEvent/
+#	$(MAKE) -C tools/wmiconfig/
+#	$(MAKE) -C tools/recEvent/
 	cp -f $(ATH_SRC_BASE)/os/linux/ar6000.$(KMOD_EXTENSION) $(COMPILED_IMAGE_OBJECTS_PATH)
-	cp -f tools/wmiconfig/wmiconfig $(COMPILED_IMAGE_OBJECTS_PATH)
-	cp -f tools/recEvent/recEvent $(COMPILED_IMAGE_OBJECTS_PATH)
-	cp -f tools/recEvent/restore.sh $(COMPILED_IMAGE_OBJECTS_PATH)
+#	cp -f tools/wmiconfig/wmiconfig $(COMPILED_IMAGE_OBJECTS_PATH)
+#	cp -f tools/recEvent/recEvent $(COMPILED_IMAGE_OBJECTS_PATH)
+#	cp -f tools/recEvent/restore.sh $(COMPILED_IMAGE_OBJECTS_PATH)
 	
 clean:
 	rm -f os/linux/ar6000.mod.c os/linux/*.o os/linux/*.ko wmi/*.o htc/AR6000/src/*.o htc/*.o \
