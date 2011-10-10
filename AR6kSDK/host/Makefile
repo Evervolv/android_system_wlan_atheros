@@ -84,6 +84,8 @@ export  ATH_SOFTMAC_FILE_USED
 export  ATH_CFG80211_ENV
 export  ATH_DEBUG_DRIVER
 
+export  ATH_AR600x_SD32_XXX 
+
 ATH_SRC_BASE :=$(shell pwd)
 MAKE :=make
 CC :=$(ATH_CROSS_COMPILE_TYPE)gcc

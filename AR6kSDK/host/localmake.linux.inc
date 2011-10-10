@@ -59,3 +59,5 @@ endif
   ATH_CFG80211_ENV := no
   ATH_BUILD_SYSTEM_TOOLS := no
 
+	ATH_AR600x_SD32_XXX := yes
+
